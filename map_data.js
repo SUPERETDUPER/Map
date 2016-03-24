@@ -186,7 +186,14 @@ eqfeed_callback({
 		}, {
 			"name" : "Accommodation",
 			"icon_color" : "red",
-			"items" : [ {
+			"items" : [{
+					"title" : "Chelsea Hotel",
+					"website":"http://www.chelseatoronto.com/en/",
+					"address":"33 Gerrard St W, Toronto, ON M5G 1Z4, Canada",
+					"details":"",
+					"type":"point",
+					"coordinates":[43.658517, -79.383096]
+				}, {
 					"title" : "Toronto Delta Hotel",
 					"website" : "https://www.deltahotels.com/Hotels/Delta-Toronto",
 					"address" : "75 Lower Simcoe St, Toronto, ON M5J 3A6",
