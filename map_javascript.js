@@ -1,6 +1,21 @@
 // Copyright 2016, Martin Staadecker, All rights reserved.
 var map;
 var markers = [];
+function load() {
+	// Adding the script tag to the head as suggested before
+	var head = document.getElementsByTagName('head')[0];
+	var script = document.createElement('script');
+	script.type = 'text/javascript';
+	script.src = 'https://maps.googleapis.com/maps/api/js?key=' + api_key;
+
+	// Then bind the event to the callback function.
+	// There are several events for cross browser compatibility.
+	script.onreadystatechange = initialize;
+	script.onload = initialize;
+
+	// Fire the loading
+	head.appendChild(script);
+}
 function initialize() {
 	//Build map
 	map = new google.maps.Map(document.getElementById('map'), {
@@ -14,7 +29,6 @@ function initialize() {
 	map.controls[google.maps.ControlPosition.RIGHT_TOP].push(document.getElementById('legend'));
 	map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(document.getElementById('info'));
 	map.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(document.getElementById('rights'));
-	//map.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(document.getElementById('sources'));
 }
 //When user clicks on item in legend
 select = function (id) {
@@ -53,7 +67,6 @@ toggle = function (id) {
 		image.src = "markers\\arrow_right.png";
 	}
 }
-display_sources = function () {}
 window.eqfeed_callback = function (results) {
 	//Get lengenf
 	var legend = document.getElementById("legend");
@@ -113,9 +126,9 @@ window.eqfeed_callback = function (results) {
 				//Add marker to marker array
 				markers[items_added] = marker;
 				//Build infowindow text
-				var details = "<h5>"+item.title+"</h5>";
+				var details = "<h5>" + item.title + "</h5>";
 				if (item.website != null && item.website != "") {
-					details+= "<a href='" + item.website + "' target='_blank'>Website</a>";
+					details += "<a href='" + item.website + "' target='_blank'>Website</a>";
 				}
 				if (item.address != null && item.address != "") {
 					details += "<p>" + item.address + "</p>";
@@ -125,7 +138,7 @@ window.eqfeed_callback = function (results) {
 				}
 				marker.info = new google.maps.InfoWindow({
 						maxWidth : 250,
-						content:details
+						content : details
 					});
 				google.maps.event.addListener(marker, 'click', function () {
 					//loop through all infowindows and close them
@@ -153,4 +166,4 @@ window.eqfeed_callback = function (results) {
 	//center map on first marker (ABYC)
 	select(0, "point");
 }
-google.maps.event.addDomListener(window, 'load', initialize)
+load();
