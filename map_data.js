@@ -2,7 +2,7 @@
 eqfeed_callback({
 	"categories" : [{
 			"icon_color" : "yellow",
-			"name" : "2016 ABYC Canadiens",
+			"name" : "2016 ABYC Canadians",
 			"items" : [{
 					"title" : "ABYC",
 					"website" : "http://abyc.on.ca/",
@@ -186,7 +186,7 @@ eqfeed_callback({
 		}, {
 			"name" : "Accommodation",
 			"icon_color" : "red",
-			"items" : [{
+			"items" : [ {
 					"title" : "Toronto Delta Hotel",
 					"website" : "https://www.deltahotels.com/Hotels/Delta-Toronto",
 					"address" : "75 Lower Simcoe St, Toronto, ON M5J 3A6",
