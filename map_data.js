@@ -1,4 +1,6 @@
 // Copyright 2016, Martin Staadecker, All rights reserved.
+
+//Calls eqfeed_callback funciton in map_javascript.js
 eqfeed_callback({
 	"categories" : [{
 			"icon_color" : "yellow",
