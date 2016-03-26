@@ -1,6 +1,25 @@
 // Copyright 2016, Martin Staadecker, All rights reserved.
 var map;
 var markers = [];
+function load() {
+	// Adding the script tag to the head
+	var head = document.getElementsByTagName('head')[0];
+	var script = document.createElement('script');
+	var api_key=""
+	script.type = 'text/javascript';
+	script.src = 'https://maps.googleapis.com/maps/api/js'
+	if (api_key!=""){
+		script.src+='?key='+api_key;
+	}
+	
+	// Then bind the event to the callback function.
+	// There are several events for cross browser compatibility.
+	script.onreadystatechange = initialize;
+	script.onload = initialize;
+
+	// Fire the loading
+	head.appendChild(script);
+}
 function initialize() {
 	//Build map
 	map = new google.maps.Map(document.getElementById('map'), {
@@ -153,4 +172,4 @@ window.eqfeed_callback = function (results) {
 	//center map on first marker (ABYC)
 	select(0, "point");
 }
-google.maps.event.addDomListener(window, 'load', initialize)
+load();
