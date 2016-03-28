@@ -37,6 +37,7 @@ function initialize() {
 	map.controls[google.maps.ControlPosition.RIGHT_TOP].push(document.getElementById('legend'));
 	map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(document.getElementById('info'));
 	map.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(document.getElementById('rights'));
+	map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(document.getElementById('image'));
 }
 
 window.eqfeed_callback = function (results) {
