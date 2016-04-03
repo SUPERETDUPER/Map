@@ -69,7 +69,7 @@ window.eqfeed_callback = function (results) {
 
 		//If container is colapsed expand container and point arrow down
 		if (container.style.display == "none") {
-			container.style.display = "initial";
+			container.style.display = "";
 			image.src = "markers\\arrow_down.png";
 		}
 
