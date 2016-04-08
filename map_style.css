@@ -10,6 +10,12 @@ html, body, #map {
 	overflow:scroll;
 	width:190px;
 	height:calc(100% - 80px);
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none;   /* Chrome/Safari/Opera */
+	-khtml-user-select: none;    /* Konqueror */
+	-moz-user-select: none;      /* Firefox */
+	-ms-user-select: none;       /* IE/Edge */
+	user-select: none;           /* non-prefixed version, currently not supported by any browser */
 }
 #legend_title{
 	font-weight:bold;
