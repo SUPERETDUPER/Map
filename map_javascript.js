@@ -25,7 +25,11 @@ function load() {
 function initialize() {
 	//Build map
 	map = new google.maps.Map(document.getElementById('map'), {
-			mapTypeId : google.maps.MapTypeId.ROADMAP
+			mapTypeId : google.maps.MapTypeId.ROADMAP,
+			zoomControlOptions : {
+				position : google.maps.ControlPosition.LEFT_TOP
+			},
+			streetViewControl : false
 		});
 
 	// Create a <script> tag and set the map_data.js as the source.

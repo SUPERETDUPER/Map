@@ -9,7 +9,7 @@ html, body, #map {
     padding: 10px;
 	overflow:scroll;
 	width:190px;
-	height:calc(100% - 190px);
+	height:calc(100% - 80px);
 }
 #legend_title{
 	font-weight:bold;
