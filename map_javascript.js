@@ -38,6 +38,7 @@ function initialize() {
 	document.getElementsByTagName('head')[0].appendChild(script);
 
 	//Push different elements (legend,info,rights) in position
+	map.controls[google.maps.ControlPosition.RIGHT_TOP].push(document.getElementById('open_legend'));
 	map.controls[google.maps.ControlPosition.RIGHT_TOP].push(document.getElementById('legend'));
 	map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(document.getElementById('info'));
 	map.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(document.getElementById('rights'));
@@ -48,7 +49,24 @@ window.eqfeed_callback = function (results) {
 
 	//Array of Google Map API markers
 	var markers = [];
-
+	
+	//Runs when arrow button is pressed
+	hide_legend = function(){
+		legend=document.getElementById("legend");
+		arrow=document.getElementById("open_legend");
+		info=document.getElementById("info");
+		legend.style.display="none";
+		arrow.style.display="";
+		info.style.display="none";
+	}
+	unhide_legend = function(){
+		legend=document.getElementById("legend");
+		arrow=document.getElementById("open_legend");
+		info=document.getElementById("info");
+		legend.style.display="";
+		arrow.style.display="none";
+		info.style.display="";
+	}
 	//Runs when user clicks on item in legend
 	select = function (id) {
 		//Close all info windows
