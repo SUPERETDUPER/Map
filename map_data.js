@@ -195,6 +195,13 @@ eqfeed_callback({
 					"details":"",
 					"type":"point",
 					"coordinates":[43.658517, -79.383096]
+				},{
+					"title" : "Countryard Marriott Toronto Downtown",
+					"website" : "http://www.marriott.com/hotels/travel/yyzcy-courtyard-toronto-downtown/",
+					"address" : "475 Yonge St, Toronto, ON M4Y 1X7, Canada",
+					"details" : "",
+					"type" : "point",
+					"coordinates" : [43.662377, -79.382853]
 				}, {
 					"title" : "Toronto Delta Hotel",
 					"website" : "https://www.deltahotels.com/Hotels/Delta-Toronto",
