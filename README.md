@@ -9,5 +9,8 @@ This project is a map of Toronto and it's neighbour cities. It uses the **Google
 	`var api_key="a1b2c3d4e5f6g7h8i9j1"; //YOUR API KEY HERE`
 4. Run map_core.html with your web browser.
 
+## Try it out
+https://rawgit.com/SUPERETDUPER/Map/master/map_core.html
+
 ## License
 The contents of this repository are covered under the [MIT License](LICENSE).
