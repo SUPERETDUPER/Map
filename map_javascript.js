@@ -6,7 +6,7 @@ function load() {
 	var head = document.getElementsByTagName('head')[0];
 	var script = document.createElement('script');
 
-	var api_key = ""; //YOUR API KEY HERE
+	var api_key = "AIzaSyAtv-3nm8KNFXYXNn2gkSnAsaTLeSlLqO8"; //YOUR API KEY HERE
 
 	script.type = 'text/javascript';
 	script.src = 'https://maps.googleapis.com/maps/api/js'
