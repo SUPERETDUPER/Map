@@ -32,9 +32,9 @@ function initialize() {
 			streetViewControl : false
 		});
 
-	// Create a <script> tag and set the map_data.js as the source.
+	// Create a <script> tag and set data.js as the source.
 	var script = document.createElement('script');
-	script.src = 'map_data.js';
+	script.src = 'data.js';
 	document.getElementsByTagName('head')[0].appendChild(script);
 
 	//Push different elements (legend,info,rights) in position
