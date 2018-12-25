@@ -2,7 +2,7 @@
 A map of with the main touristic attractions in the Toronto region. The project uses the Google Map Javascript API to display a map with markers. The map also has a custom interactive legend.
 
 ## Try it out
-https://superetduper.github.io/Touristic-Map
+https://staadecker.github.io/Touristic-Map/
 
 ## Run it locally
 1. Download the project.
