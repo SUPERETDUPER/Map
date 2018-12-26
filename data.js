@@ -209,9 +209,6 @@ eqfeed_callback({
 					"details" : "",
 					"type" : "point",
 					"coordinates" : [43.642552, -79.383860]
-				}, {
-					"icon" : "",
-					"title" : "<p></p><p id='coming_soon'>More Accommodations Coming Soon!</p>"
 				}
 			]
 		}, {
